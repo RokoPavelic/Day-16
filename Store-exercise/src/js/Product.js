@@ -7,8 +7,8 @@ class Product {
     this.element = document.createElement("div");
     this.element.className = "product";
     this.element.innerHTML =
-      `<div>
-    <div class="box"><p>Name:</p>` +
+      `<div class =box-container>
+    <div class="box">` +
       product.name +
       `</div>
     <div class="box"><p>Price:</p>` +
@@ -44,9 +44,8 @@ class Product {
 
   store(count) {
     this.quantity++;
-    const quantity1 = document.createElement("p");
-    quantity1.innerText = this.quantity;
-    this.element.appendChild(quantity1);
+    const quantity = this.element.querySelector(".quantity");
+    quantity.innerText = this.quantity;
   }
 }
 
